@@ -1,7 +1,7 @@
 {
-  "name": "utils.ts",
+  "name": "@yuler/utils",
   "version": "0.0.0",
-  "description": "collection utility functions for TypeScript",
+  "description": "Collection utility functions",
   "main": "index.js",
   "type": "module",
   "engines": {
