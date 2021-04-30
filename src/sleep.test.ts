@@ -7,6 +7,6 @@ it('sleep', async () => {
   await sleep(1000, mockCallback)
   const diff = Date.now() - pre
   expect(diff).toBeGreaterThanOrEqual(1000)
-  expect(diff).toBeLessThanOrEqual(1010)
+  expect(diff).toBeLessThanOrEqual(1050)
   expect(mockCallback.mock.calls.length).toBe(1)
 })
