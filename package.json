@@ -7,8 +7,8 @@
   "author": "Yu Le <is.yuler@gmail.com>",
   "type": "module",
   "exports": {
-    "./": "./dist/index.js",
-    "./sleep": "./dist/sleep.js"
+    ".": "./dist/index.js",
+    "./*": "./dist/*.js"
   },
   "engines": {
     "node": ">=12"
