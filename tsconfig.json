@@ -1,9 +1,7 @@
 {
 	"extends": "@yuler/tsconfig",
-	"compilerOptions": {
-		"outDir": "dist"
-	},
 	"include": [
-		"src"
+		"src",
+		"test"
 	]
 }
