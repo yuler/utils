@@ -2,38 +2,30 @@
   "name": "@yuler/utils",
   "version": "0.0.0",
   "description": "Collection utility functions",
-  "main": "index.js",
+  "license": "MIT",
+  "repository": "yuler/utils",
+  "author": "Yu Le <is.yuler@gmail.com>",
   "type": "module",
+  "exports": {
+    "./sleep": "./dist/sleep.js"
+  },
+  "types": "dist/**/*.d.ts",
   "engines": {
     "node": ">=12"
   },
-  "exports": {
-    "./dist/*": "./dist/*.js"
+  "scripts": {
+    "test": "xo && npm run build && ava",
+    "build": "del dist && tsc --project tsconfig.dist.json",
+    "release": "np"
   },
   "files": [
     "dist"
   ],
-  "types": "dist/**/*.d.ts",
-  "scripts": {
-    "test": "npm run build && ava",
-    "build": "del dist && tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuler/utils.ts.git"
-  },
   "keywords": [
     "utils",
     "typescript"
   ],
-  "author": "Yu Le <is.yuler@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yuler/utils.ts/issues"
-  },
-  "homepage": "https://github.com/yuler/utils.ts#readme",
   "devDependencies": {
-    "@ava/typescript": "^1.1.1",
     "@yuler/tsconfig": "^0.1.1",
     "ava": "^3.15.0",
     "del-cli": "^3.0.1",
@@ -42,11 +34,14 @@
     "xo": "^0.39.1"
   },
   "ava": {
-    "typescript": {
-      "rewritePaths": {
-        "src/": "dist/"
-      }
+    "extensions": {
+      "ts": "module"
     },
-		"timeout": "1m"
+    "nonSemVerExperiments": {
+			"configurableModuleFormat": true
+		},
+    "nodeArguments": [
+      "--loader=ts-node/esm"
+    ]
   }
 }

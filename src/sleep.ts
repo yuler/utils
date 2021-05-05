@@ -1,8 +1,11 @@
-export default function sleep(ms: number, callback?: () => void): Promise<void> {
-  return new Promise<void>(resolve =>
-    setTimeout(async () => {
-      await callback?.()
-      resolve()
-    }, ms),
-  )
+import {Awaitable} from './types';
+
+export default async function sleep(ms: number, callback?: Awaitable<any>): Promise<void> {
+	return new Promise<void>(resolve =>
+		// eslint-disable-next-line no-promise-executor-return
+		setTimeout(async () => {
+			await callback?.();
+			resolve();
+		}, ms)
+	);
 }
