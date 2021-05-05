@@ -1,48 +1,48 @@
 {
-  "name": "@yuler/utils",
-  "version": "0.0.0",
-  "description": "Collection utility functions",
-  "license": "MIT",
-  "repository": "yuler/utils",
-  "author": "Yu Le <is.yuler@gmail.com>",
-  "type": "module",
-  "exports": {
-    ".": "./dist/index.js",
-    "./*": "./dist/*.js"
-  },
-  "engines": {
-    "node": ">=12"
-  },
-  "scripts": {
-    "test": "xo && npm run build && ava",
-    "build": "del dist && tsc --project tsconfig.dist.json",
-    "release": "np"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "utils",
-    "typescript"
-  ],
-  "devDependencies": {
-    "@yuler/tsconfig": "^0.1.1",
-    "ava": "^3.15.0",
-    "del-cli": "^3.0.1",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4",
-    "xo": "^0.39.1"
-  },
-  "types": "dist",
-  "ava": {
-    "extensions": {
-      "ts": "module"
-    },
-    "nonSemVerExperiments": {
+	"name": "@yuler/utils",
+	"version": "0.0.0",
+	"description": "Collection utility functions",
+	"license": "MIT",
+	"repository": "yuler/utils",
+	"author": "Yu Le <is.yuler@gmail.com>",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js",
+		"./*": "./dist/*.js"
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"scripts": {
+		"test": "xo && npm run build && ava",
+		"build": "del dist && tsc --project tsconfig.dist.json",
+		"release": "np"
+	},
+	"files": [
+		"dist"
+	],
+	"keywords": [
+		"utils",
+		"typescript"
+	],
+	"devDependencies": {
+		"@yuler/tsconfig": "^0.1.1",
+		"ava": "^3.15.0",
+		"del-cli": "^3.0.1",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4",
+		"xo": "^0.39.1"
+	},
+	"types": "dist",
+	"ava": {
+		"extensions": {
+			"ts": "module"
+		},
+		"nonSemVerExperiments": {
 			"configurableModuleFormat": true
 		},
-    "nodeArguments": [
-      "--loader=ts-node/esm"
-    ]
-  }
+		"nodeArguments": [
+			"--loader=ts-node/esm"
+		]
+	}
 }
