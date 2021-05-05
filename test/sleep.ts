@@ -1,5 +1,5 @@
 import test from 'ava';
-import sleep from '../src/sleep.js';
+import {sleep} from '../src/index.js';
 
 test('callback execute', async t => {
 	await sleep(1000, () => {
