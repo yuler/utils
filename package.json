@@ -8,7 +8,7 @@
 	"type": "module",
 	"exports": {
 		".": "./dist/index.js",
-		"./*": "./dist/*.js"
+		"./sleep": "./dist/sleep.js"
 	},
 	"engines": {
 		"node": ">=12"
@@ -33,7 +33,7 @@
 		"typescript": "^4.2.4",
 		"xo": "^0.39.1"
 	},
-	"types": "dist",
+	"types": "dist/*.d.ts",
 	"ava": {
 		"extensions": {
 			"ts": "module"
