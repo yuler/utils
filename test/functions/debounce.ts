@@ -1,5 +1,5 @@
 import test from 'ava';
-import {debounce, sleep} from '../src/index.js';
+import {debounce, sleep} from '../../src/index.js';
 
 test('debounces a function', async t => {
 	let count = 0;

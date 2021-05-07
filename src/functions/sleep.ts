@@ -1,4 +1,4 @@
-import {Awaitable} from './types.js';
+import {Awaitable} from '../types.js';
 
 export async function sleep(ms: number, callback?: Awaitable<any>): Promise<void> {
 	return new Promise<void>(resolve =>
