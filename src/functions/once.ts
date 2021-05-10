@@ -1,4 +1,4 @@
-const calledFunctions = new WeakMap();
+const calledFunctions = new WeakMap<any, number>();
 
 export function once<ArgumentsType extends unknown[], ReturnType>(
 	fn: (...args: ArgumentsType) => ReturnType,
@@ -10,7 +10,7 @@ export function once<ArgumentsType extends unknown[], ReturnType>(
 	// ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName
 	const functionName = (fn as {displayName?: string}).displayName ?? fn.name ?? '<anonymous>';
 
-	const onced = function (this: any, ...args: ArgumentsType) {
+	const onced = function (this: any, ...args: ArgumentsType): ReturnType {
 		calledFunctions.set(onced, ++callCount);
 
 		if (callCount === 1) {
@@ -34,10 +34,6 @@ once.callCount = (
 		throw new Error(`The given function \`${fn.name}\` is not wrapped by the \`once\` package`);
 	}
 
-	return calledFunctions.get(fn);
+	// eslint-disable-next-line @typescript-eslint/non-nullable-type-assertion-style
+	return calledFunctions.get(fn) as number;
 };
-
-export interface oncedFunction<ArgumentsType extends unknown[], ReturnType> {
-	(...args: ArgumentsType): ReturnType;
-	callCount(fn: (...args: any[]) => unknown): number;
-}
