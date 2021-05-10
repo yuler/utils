@@ -44,12 +44,8 @@
 	},
 	"xo": {
 		"rules": {
-			"unicorn/filename-case": [
-				"error",
-				{
-					"case": "camelCase"
-				}
-			]
+			"@typescript-eslint/no-empty-function": "off",
+			"unicorn/filename-case": "off"
 		}
 	}
 }
