@@ -35,11 +35,11 @@ test('call function last time', async t => {
 	t.is(count, 2);
 });
 
-/* eslint-disable unicorn/no-this-assignment, no-useless-call */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment, unicorn/no-this-assignment, no-useless-call */
 test('call with context', async t => {
 	const wait = 100;
 
-	let ctx;
+	let ctx: any;
 	const foo = {};
 	const bar = {};
 
@@ -75,4 +75,4 @@ test('call with arguments', async t => {
 	await sleep(wait + 5);
 	t.is(args?.[0], 2);
 });
-/* eslint-enable unicorn/no-this-assignment, no-useless-call */
+/* eslint-enable @typescript-eslint/no-unsafe-assignment, unicorn/no-this-assignment, no-useless-call */
