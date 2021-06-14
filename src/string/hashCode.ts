@@ -4,7 +4,7 @@
  * refs: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#hashCode--
  *
  * Returns a hash code for a string.
- * @param str string
+ * @param string string
  * @returns number
  */
 export function hashCode(string: string) {
