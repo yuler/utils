@@ -11,6 +11,6 @@ export function camelize(input: string): string {
 	return input
 		.replace(/^[_.\- ]+/, '')
 		.toLowerCase()
-		.replace(/[_.\- ]+(\w|$)/g, (_, p1) => p1.toUpperCase())
+		.replace(/[_.\- ]+(\w|$)/g, (_, p1) => (p1 as string).toUpperCase())
 		.replace(/\d+(\w|$)/g, m => m.toUpperCase());
 }

@@ -13,6 +13,7 @@ test('__proto__ keys', t => {
 });
 
 test('should omit undefineds', t => {
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	const empty = {} as any;
 	t.deepEqual(pick(empty, ['foo', 'bar', 'baz']), empty);
 });

@@ -12,11 +12,11 @@
  */
 export function pick<
 	ObjectType extends Record<string, any>,
-	IncludedKeys extends keyof ObjectType
+	Keys extends keyof ObjectType
 >(
 	object: ObjectType,
-	keys: readonly IncludedKeys[]
-): Pick<ObjectType, IncludedKeys> {
+	keys: readonly Keys[]
+): Pick<ObjectType, Keys> {
 	const result = {};
 
 	for (const key of Object.values(keys)) {
@@ -30,5 +30,5 @@ export function pick<
 		}
 	}
 
-	return result as Pick<ObjectType, IncludedKeys>;
+	return result as Pick<ObjectType, Keys>;
 }
