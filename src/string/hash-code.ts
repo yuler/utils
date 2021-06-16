@@ -4,13 +4,14 @@
  * refs: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#hashCode--
  *
  * Returns a hash code for a string.
- * @param string string
+ *
+ * @param input string
  * @returns number
  */
-export function hashCode(string: string) {
+export function hashCode(input: string) {
 	let hash = 0;
-	for (let i = 0; i < string.length; i++) {
-		hash = (hash << 5) - hash + string.charCodeAt(i);
+	for (let i = 0; i < input.length; i++) {
+		hash = (hash << 5) - hash + input.charCodeAt(i);
 		hash = Math.trunc(hash); // Convert to 32bit integer
 	}
 

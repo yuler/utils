@@ -5,12 +5,12 @@
  * https://npm.im/indent-string
  * https://npm.im/indent-string
  *
- * @param string - The string to indent.
- * @param count - How many times you want repeated. Default: `1`.
- * @param indent - The string to use for the indent. Default: ` `.
- * @returns
+ * @param input - The string to indent
+ * @param count - How many times you want repeated. Default: `1`
+ * @param indent - The string to use for the indent. Default: ` `
+ * @returns string
  */
-export function indent(string: string, count = 1, indent = ' '): string {
+export function indent(input: string, count = 1, indent = ' '): string {
 	if (count < 0) {
 		throw new RangeError(
 			`Expected \`count\` to be at least 0, got \`${count}\``
@@ -18,11 +18,11 @@ export function indent(string: string, count = 1, indent = ' '): string {
 	}
 
 	if (count === 0) {
-		return string;
+		return input;
 	}
 
 	const regex = /^(?!\s*$)/gm;
 
-	return string.replace(regex, indent.repeat(count));
+	return input.replace(regex, indent.repeat(count));
 }
 
