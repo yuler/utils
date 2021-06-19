@@ -8,12 +8,12 @@ type SemverParts = [string, string, string];
 
 /**
  * Compare two semver verison string.
- * 
+ *
  * @source Other libs
  * https://npm.im/semver-compare
  * https://npm.im/semiver
- * 
- * @param versionA 
+ *
+ * @param versionA
  * @param versionB
  * @returns -1, 0, 1
  */
