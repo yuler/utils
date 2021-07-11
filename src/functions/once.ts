@@ -10,7 +10,7 @@ const calledFunctions = new WeakMap<any, number>();
  */
 export function once<ArgumentsType extends unknown[], ReturnType>(
 	fn: (...args: ArgumentsType) => ReturnType,
-	throwable = false
+	throwable = false,
 ): (...args: ArgumentsType) => ReturnType {
 	let result: ReturnType;
 	let callCount = 0;
@@ -53,7 +53,7 @@ export function once<ArgumentsType extends unknown[], ReturnType>(
  * ```
  */
 once.callCount = (
-	fn: (...args: unknown[]) => unknown
+	fn: (...args: unknown[]) => unknown,
 ): number => {
 	if (!calledFunctions.has(fn)) {
 		throw new Error(`The given function \`${fn.name}\` is not wrapped by the \`once\` package`);

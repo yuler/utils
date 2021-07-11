@@ -7,6 +7,6 @@ export async function sleep(ms: number, callback?: Awaitable<any>): Promise<void
 			// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 			await callback?.();
 			resolve();
-		}, ms)
+		}, ms),
 	);
 }
