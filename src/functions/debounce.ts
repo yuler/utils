@@ -21,7 +21,7 @@
 export function debounce<ArgumentsType extends unknown[], ReturnType>(
 	fn: (...args: ArgumentsType) => ReturnType,
 	wait = 0,
-	immediate = false
+	immediate = false,
 ): DebouncedFunction<ArgumentsType, ReturnType> {
 	let timeout: NodeJS.Timeout | undefined;
 	let result: ReturnType;

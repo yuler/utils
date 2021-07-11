@@ -5,7 +5,7 @@ test('throw if count is a negative', t => {
 	t.throws(() => {
 		indent('foo', -1);
 	}, {
-		message: 'Expected `count` to be at least 0, got `-1`'
+		message: 'Expected `count` to be at least 0, got `-1`',
 	});
 });
 

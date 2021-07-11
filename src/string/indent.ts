@@ -13,7 +13,7 @@
 export function indent(input: string, count = 1, indent = ' '): string {
 	if (count < 0) {
 		throw new RangeError(
-			`Expected \`count\` to be at least 0, got \`${count}\``
+			`Expected \`count\` to be at least 0, got \`${count}\``,
 		);
 	}
 

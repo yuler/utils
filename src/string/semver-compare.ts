@@ -1,7 +1,7 @@
 export enum Comparison {
 	Equals = 0,
 	Greater = 1,
-	Lesser = -1
+	Lesser = -1,
 }
 
 type SemverParts = [string, string, string];
