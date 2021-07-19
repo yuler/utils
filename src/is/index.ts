@@ -14,3 +14,6 @@ export function isUndefined(input: unknown): input is undefined {
 export function isRegexp(input: unknown): input is RegExp {
 	return Object.prototype.toString.call(input) === '[object RegExp]';
 }
+
+// TODO:
+// isPromise()
