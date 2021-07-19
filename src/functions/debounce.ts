@@ -23,7 +23,7 @@ export function debounce<ArgumentsType extends unknown[], ReturnType>(
 	wait = 0,
 	immediate = false,
 ): DebouncedFunction<ArgumentsType, ReturnType> {
-	let timeout: NodeJS.Timeout | undefined;
+	let timeout: number | undefined;
 	let result: ReturnType;
 
 	const debounced = function (this: any, ...args: ArgumentsType) {

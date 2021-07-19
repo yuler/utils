@@ -10,7 +10,7 @@ export function throttle<ArgumentsType extends unknown[], ReturnType>(
 	fn: (...args: ArgumentsType) => ReturnType,
 	wait: number,
 ): (...args: ArgumentsType) => ReturnType {
-	let timeout: NodeJS.Timeout | undefined;
+	let timeout: number | undefined;
 	let result: ReturnType;
 	let last = 0;
 
