@@ -1,7 +1,4 @@
 {
-	"extends": "@yuler/tsconfig",
-	"include": [
-		"src",
-		"test"
-	]
+  "extends": "@yuler/tsconfig",
+  "include": ["src", "test"]
 }

@@ -5,5 +5,5 @@
  * @returns boolean
  */
 export function isRegexp(input: unknown): input is RegExp {
-	return Object.prototype.toString.call(input) === '[object RegExp]';
+  return Object.prototype.toString.call(input) === '[object RegExp]'
 }
