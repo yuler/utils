@@ -14,8 +14,7 @@
   "scripts": {
     "test": "vitest",
     "build": "rm -rf dist && tsc --project tsconfig.dist.json",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "release": "np"
+    "format": "prettier --write \"src/**/*.ts\""
   },
   "files": [
     "dist"
