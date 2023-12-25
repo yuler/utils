@@ -29,3 +29,21 @@ export function pick<
 
   return result as Pick<ObjectType, Keys>
 }
+
+/**
+ * Removes undefined values from an object.
+ * @param object - The object to compact.
+ * @returns A new object with undefined values removed.
+ */
+export function compact(object: Record<string, any>) {
+  const result: Record<string, any> = {}
+
+  for (const key in object) {
+    const value = object[key]
+    if (value !== undefined) {
+      result[key] = value
+    }
+  }
+
+  return result
+}
