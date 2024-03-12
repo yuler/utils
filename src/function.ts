@@ -112,7 +112,7 @@ export function debounce<ArgumentsType extends unknown[], ReturnType>(
       clearTimeout(timeout)
     }
 
-    timeout = setTimeout(later, wait)
+    timeout = setTimeout(later, wait) as any
 
     if (shouldCallNow) {
       result = fn.apply(this, args)
@@ -160,7 +160,7 @@ export function throttle<ArgumentsType extends unknown[], ReturnType>(
       if (delta >= wait) {
         call()
       } else {
-        timeout = setTimeout(call, wait - delta)
+        timeout = setTimeout(call, wait - delta) as any
       }
     }
 
