@@ -1,7 +1,7 @@
 {
   "name": "@yuler/utils",
-  "version": "0.3.0",
-	"packageManager": "pnpm@10.10.0",
+  "version": "0.3.1",
+  "packageManager": "pnpm@10.10.0",
   "description": "Collection utility functions",
   "license": "MIT",
   "repository": {
